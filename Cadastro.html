@@ -1,0 +1,94 @@
+<!-- Informa ao navegador que a página é do tipo HTML-->
+<!DOCTYPE html>
+
+<!-- Scripts JavaScript-->
+<script>
+    //Função Avançar
+    function avancar()
+    {
+        //Acessa a página do cardapio
+        window.location.href  = 'Cardapio.html'
+
+        /*
+        //Recebe os valores
+        let nome = document.getElementById("inputNome").value;
+        let sobrenome = document.getElementById("inputSobrenome").value;
+        let telefone = document.getElementById("inputTelefone").value;
+        let rua = document.getElementById("inputRuaEnd").value;
+        let num = document.getElementById("inputNumEnd").value;
+        let comp = document.getElementById("inputCompEnd").value;
+
+        //Se algum valor estiver em branco
+        if(nome == null)
+        {
+            alert("Informe todos os dados!");
+        }
+        else
+        {
+            alert("OK");
+            //Acessa a página do cardapio
+            window.location.href  = 'Cardapio.html';
+        }
+        */
+    }
+</script>
+
+<!-- Define que o idioma é portugues-->
+<html lang="pt-br">
+
+    <!-- Cabeçalho da página -->
+    <head>
+        <!-- Indica para o navegador que o padrão da linguagem é UTF-8 (letras e símbolos)-->
+        <meta charset="UTF-8">
+
+        <!-- Importa os Estilos CSS-->
+        <link rel="stylesheet" type="text/css" href="Estilos.css">
+
+        <!-- Define o título da página no navegador (nome da guia)-->
+        <title>Cadastro - Bom Gosto</title>
+
+        <div>
+            <!-- Logo-->
+            <img id="logo" src="Resources/Imagens/Logo_editado.png">
+
+            <!-- Entrar-->
+            <div style="float: right;"> <!-- Alinhado à direita-->
+                <img class="entrar" src="Resources/Imagens/Icons/profile black.png">
+                <br/>
+                <text class="entrar">Entrar</text>
+            </div>
+        </div>
+    </head>
+
+    <!-- Corpo da página -->
+    <body>        
+        <!-- Parte principal do Body -->
+        <main>
+            <form class="center">
+                <br/>
+                <text>Insira seu nome</text>
+                <br/>
+                <input id="inputNome" class="inputGrande" type="text" placeholder="Nome" minlength="3" maxlength="30" required>
+                <br/>
+                <input id="inputSobrenome" class="inputGrande" type="text" placeholder="Sobrenome" minlength="3" maxlength="30" required>
+                <br/>
+
+                <text>Insira seu telefone</text>
+                <br/>
+                <input id="inputTelefone" class="inputGrande" type="tel" placeholder="(00) 00000-0000" minlength="10" maxlength="11" required>
+                <br/>
+                
+                <text>Insira seu endereço</text>
+                <br/>
+                <input id="inputRuaEnd" class="inputGrande" type="text" placeholder="Rua, Estrada e etc..." minlength="3" maxlength="50" required>
+                <br/>
+                <input id="inputNumEnd" class="inputPequeno" type="text" placeholder="Nº" minlength="1" maxlength="6" required>
+                <input id="inputCompEnd" class="inputPequeno" type="text" placeholder="Complemento">
+                <br/>
+
+                <button id="btnAvancar" class="btnGrande" onclick="avancar()" type="button"><span>Avançar</span></button>
+
+            </form>
+        </main>
+    </body>
+</html>

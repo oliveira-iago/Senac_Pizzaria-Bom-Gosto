@@ -1,0 +1,67 @@
+<!-- Informa ao navegador que a página é do tipo HTML-->
+<!DOCTYPE html>
+
+<!-- Scripts JavaScript-->
+<script>
+    //Função Avançar
+    function avancar()
+    {
+        //Recebe o CEP
+        let cep = document.getElementById("inputCEP").value;
+
+        //Se o CEP tiver 9 dígitos
+        if(cep.length == 9)
+        {
+            //Acessa a página de cadastros
+            window.location.href  = 'Cadastro.html';
+        }
+        else
+        {
+            //Exibe um alerta
+            alert("Insira o CEP completo");
+        }
+    }
+</script>
+
+<!-- Define que o idioma é portugues-->
+<html lang="pt-br">
+
+    <!-- Cabeçalho da página -->
+    <head>
+        <!-- Indica para o navegador que o padrão da linguagem é UTF-8 (letras e símbolos)-->
+        <meta charset="UTF-8">
+        
+        <!-- Importa os Estilos CSS-->
+        <link rel="stylesheet" type="text/css" href="Estilos.css">
+        
+        <!-- Define o título da página no navegador (nome da guia)-->
+        <title>Home - Bom Gosto</title>
+
+        <div>
+            <!-- Logo-->
+            <img id="logo" src="Resources/Imagens/Logo_editado.png">
+
+            <!-- Entrar-->
+            <div style="float: right;"> <!-- Alinhado à direita-->
+                <img class="entrar" src="Resources/Imagens/Icons/profile black.png">
+                <br/>
+                <text class="entrar">Entrar</text>
+            </div>
+        </div>
+    </head>
+
+    <!-- Corpo da página -->
+    <body>        
+        <!-- Parte principal do Body -->
+        <main>
+            <form style="margin-top: 70px;" class="center">
+                <br/>
+                <text class="textoBasico">Informe o CEP</text>
+                <br/>     
+                <input id="inputCEP" type="text" placeholder="00000-000" minlength="9" maxlength="9" required>
+                <br/>
+                <button id="btnAvancar" class="btnMedio" onclick="avancar()" type="button"><span>Avançar</span></button>
+            </form>
+        </main>
+    </body>
+</html>

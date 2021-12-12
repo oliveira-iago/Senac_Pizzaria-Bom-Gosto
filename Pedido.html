@@ -1,0 +1,171 @@
+<!-- Informa ao navegador que a página é do tipo HTML-->
+<!DOCTYPE html>
+
+<!-- Scripts JavaScript-->
+<script>
+    //Função Finalizar
+    function finalizar()
+    {
+        //Acessa a página do cardapio
+        window.location.href  = 'Cardapio.html'
+    }
+</script>
+
+
+<!-- Define que o idioma é portugues-->
+<html lang="pt-br">
+
+    <!-- Cabeçalho da página -->
+    <head>
+        <!-- Indica para o navegador que o padrão da linguagem é UTF-8 (letras e símbolos)-->
+        <meta charset="UTF-8">
+
+        <!-- Importa os Estilos CSS-->
+        <link rel="stylesheet" type="text/css" href="Estilos.css">
+
+        <!-- Define o título da página no navegador (nome da guia)-->
+        <title>Pedido - Bom Gosto</title>
+
+        <div>
+            <!-- Logo-->
+            <img id="logo" src="Resources/Imagens/Logo_editado.png">
+        </div>
+    </head>
+
+    <!-- Corpo da página -->
+    <body>
+        <!-- Parte principal do Body -->
+        <main>
+            <div id="cardapio">
+
+                <!-- Pizza Portuguesa-->
+                <div class="pizza">
+                    <img class="pizza" src="Resources/Imagens/Pizzas/portuguesa.jfif">
+
+                    <div style="float: left;">
+                        <text style="width: 225px;" class="pizza">Portuguesa</text>
+                        <text class="pizza">R$ 29,00</text>
+                        <br/>
+                        <text class="pizzaDesc">Queijo, azeitona verde ou preta, ovo cozido, presunto cozido, cebola, ervilha, milho, pimentão, orégano, molho de tomate e azeite.</text>
+                    </div>
+
+                    <input id="qtd1" class="pizzaQtdGrande" min="1" max="99" value="1" type="number" maxlength="2" readonly>
+  
+                    <br/>
+                    <button onclick="remover(29, 'qtd1')" class="pizza">Remover</button>
+                </div>
+
+                <br/>
+
+                <!-- Pizza Calabresa-->
+                <div class="pizza">
+                    <img class="pizza" src="Resources/Imagens/Pizzas/calabresa.jfif">
+
+                    <div style="float: left;">
+                        <text style="width: 225px;" class="pizza">Calabresa</text>
+                        <text class="pizza">R$ 27,00</text>
+                        <br/>
+                        <text class="pizzaDesc">Queijo, azeitona, molho de tomate, calabresa em rodelas, cebola, tomate picado, azeite e orégano.</text>
+                    </div>
+
+                    <input id="qtd2" class="pizzaQtdGrande" min="1" max="99" value="1" type="number" maxlength="2" readonly>
+                    
+                    <br/>
+                    <button onclick="remover(27, 'qtd2')" class="pizza">Remover</button>
+                </div>
+
+                <br/>
+                
+                <!-- Pizza Muçarela-->
+                <div class="pizza">
+                    <img class="pizza" src="Resources/Imagens/Pizzas/mucarela.jfif">
+
+                    <div style="float: left;">
+                        <text style="width: 225px;" class="pizza">Muçarela</text>
+                        <text class="pizza">R$ 25,00</text>
+                        <br/>
+                        <text class="pizzaDesc">Queijo muçarela em abundância, molho de tomate fresco, azeitona, rodelas de tomate e orégano.
+                        </text>
+                    </div>
+
+                    <input id="qtd3" class="pizzaQtdGrande" min="1" max="99" value="1" type="number" maxlength="2" readonly>
+                    
+                    <br/>
+                    <button onclick="remover(25, 'qtd3')" class="pizza">Remover</button>
+                </div>
+
+                <!-- Pizza Marguerita-->
+                <div class="pizza">
+                    <img class="pizza" src="Resources/Imagens/Pizzas/marguerita.jfif">
+
+                    <div style="float: left;">
+                        <text style="width: 225px;" class="pizza">Marguerita</text>
+                        <text class="pizza">R$ 30,00</text>
+                        <br/>
+                        <text class="pizzaDesc">É preparada com molho de tomate, manjericão, rodelas de tomate fresco, azeitona, queijo muçarela e orégano salpicado.
+                        </text>
+                    </div>
+
+                    <input id="qtd4" class="pizzaQtdGrande" min="1" max="99" value="1" type="number" maxlength="2" readonly>
+                    
+                    <br/>
+                    <button onclick="remover(30, 'qtd4')" class="pizza">Remover</button>
+                </div>
+
+                <!-- Pizza Carne seca com banana-->
+                <div class="pizza">
+                    <img class="pizza" src="Resources/Imagens/Pizzas/carne_banana.jfif">
+
+                    <div style="float: left;">
+                        <text style="width: 225px;" class="pizza">Carne seca com banana
+                        </text>
+                        <text class="pizza">R$ 40,00</text>
+                        <br/>
+                        <text class="pizzaDesc">É feita de carne seca sem sal e picada, cebolinha verde, banana-nanica em rodelas e requeijão.
+                        </text>
+                    </div>
+
+                    <input id="qtd5" class="pizzaQtdGrande" min="1" max="99" value="1" type="number" maxlength="2" readonly>
+                    
+                    <br/>
+                    <button onclick="remover(40, 'qtd5')" class="pizza">Remover</button>
+                </div>
+            
+            </div>
+
+            <!-- Finalizar Pedido-->
+            <div class="finalizar">
+                <!-- Pagamento-->
+                <text class="pagamento">Forma de pagamento</text>
+                <br/>
+                <!-- Opções de pagamento-->
+                <div class="pagamento">
+                    <div class="rdsPagamento">
+                        <input class="rdsPagamento" name="pagamento" type="radio" value="cartao">
+                        <img class="rdsPagamento" src="Resources/Imagens/Icons/card.png">
+                        <text class="rdsPagamento">Débito/Crédito</text>
+                    </div>
+                    <br/>
+                    <div class="rdsPagamento">
+                        <input class="rdsPagamento" name="pagamento" type="radio" value="pix">
+                        <img class="rdsPagamento" src="Resources/Imagens/Icons/PIX.png">
+                        <text class="rdsPagamento">Pagar via Pix</text>
+                    </div>
+                    <br/>
+                    <div class="rdsPagamento">
+                        <input class="rdsPagamento" name="pagamento" type="radio" value="dinheiro">
+                        <img class="rdsPagamento" src="Resources/Imagens/Icons/money.png">
+                        <text class="rdsPagamento">Com dinheiro</text>
+                    </div>
+                </div>
+
+                <br/>
+                <!-- Observação-->
+                <text class="pagamento">Alguma observação?</text>
+                <textarea class="pagamento" placeholder="Ex: Sem tomate na de queijo"></textarea>
+                <br/>
+                <button id="btnFinalizar" type="button"><span>Finalizar</span></button>
+            </div>
+        </main>
+    </body>
+</html>

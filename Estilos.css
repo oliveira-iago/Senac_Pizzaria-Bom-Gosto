@@ -1,0 +1,426 @@
+/* Fontes externas*/
+@font-face
+{
+    font-family: Quicksand; /* Nome da fonte*/
+    src: url('Resources/Fontes/Quicksand-Regular.ttf'); /* Caminho*/
+}
+@font-face
+{
+    font-family: QuicksandBold; /* Nome da fonte*/
+    src: url('Resources/Fontes/Quicksand-Bold.ttf'); /* Caminho*/
+}
+
+/* Logo que fica sempre no cabeçalho da página*/
+#logo
+{
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+}
+
+/* Imagem de login - onde usuário faz login*/
+img.entrar
+{
+    text-align: center;
+    width: 60px; height: 60px;
+    cursor:pointer; /* Cursor */
+}
+/* Texto "Entrar" - onde o usuário faz login*/
+text.entrar
+{
+    text-align: center;
+    font-size: 20px; font-family: Quicksand;
+    cursor:pointer; /* Cursor */
+}
+.entrar
+{
+    margin-right: 40px;
+}
+
+/* Centralizar*/
+.center
+{
+    text-align: center;
+}
+
+/* Corpo da página*/
+body
+{
+    /* Altura 100% da tela*/
+    height: 100%;
+    
+    background-image: url('Resources/Imagens/Background\ Pizza\ 2.jpg'); /* Caminho da imagem*/
+    background-position: center; /* Centraliza o plano de fundo*/
+    background-repeat: no-repeat; /* Faz com que o plano de fundo não fique se repetindo*/
+    background-size: cover; /* Faz com que o plano de fundo preencha a tela toda*/
+}
+
+/* Botão Médio*/
+.btnMedio
+{
+    width: 226px; height: 59px;
+    font-size: 25px; font-family: QuicksandBold;
+    color: white;
+    background-color: #FF1100;
+    border: 0; border-radius: 5px;
+    border: 1px solid #000000;
+    cursor:pointer; /* Cursor */
+    transition: all 0.5s;
+}
+/* Botão Grande*/
+.btnGrande
+{
+    width: 407px; height: 58px;
+    font-size: 28px; font-family: QuicksandBold;
+    margin-top: 15px;
+    color: white;
+    background-color: #FF1100;
+    border: 0; border-radius: 5px;
+    border: 1px solid #000000;
+    cursor:pointer; /* Cursor */
+    transition: all 0.5s;
+}
+
+/* Tag span do botão - usei um span para fazer a animação*/
+button span 
+{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+button span:after 
+{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+/* Ao passar o mouse sobre o botão*/
+button:hover span 
+{
+    padding-right: 25px; /* o texto span vai para a esquerda*/
+}
+button:hover span:after 
+{
+    opacity: 1;
+    right: 0;
+}
+
+
+/* Ao passar o mouse nos botoes adicionar pizza ao pedido*/
+button.pizza:hover {
+    background-color: #a30000; /* Vermelho escuro*/
+}
+/* Ao passar o mouse nos botoes mais e menos (quantidade de pizzas)*/
+button.pizzaQtd:hover {
+    background-color: #a30000; /* Vermelho mais escuro*/
+}
+
+/*Div onde é mostrado o total do pedido*/
+div.total
+{
+    margin-top: 90px;
+    width: 29%;
+    float: right;
+    text-align: center; 
+}
+
+/* Valor total do pedido - valor que muda conforme as pizzas do pedido*/
+#totalPedido
+{
+    color: #328E00;
+    font-family: QuicksandBold;
+    font-size: 65px;
+}
+
+/* Texto de exibição*/
+text.total
+{
+    color: #000000;
+    font-family: QuicksandBold;
+    font-size: 50px;
+}
+/* Texto de exibição da taxa de entrega */
+text.taxa
+{
+    color: #000000;
+    font-family: Quicksand;
+    font-size: 22px;
+}
+
+/*Div onde é realizada a finalização do pedido*/
+div.finalizar
+{
+    width: 29%;
+    float: right;
+    text-align: center; 
+}
+/* Forma de pagamento*/
+div.pagamento
+{
+    padding: 10px;
+    text-align: left;
+    border-radius: 5px;
+    border: 1px solid#000000;
+    background-color: #fff;
+}
+/* Textos de pagamento*/
+text.pagamento
+{
+    font-family: QuicksandBold;
+    font-size: 25px;
+}
+/* Opções de pagamento (radiobuttons)*/
+div.rdsPagamento
+{
+    height: 40px;
+}
+input.rdsPagamento
+{
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+text.rdsPagamento
+{
+    vertical-align: middle;
+    font-family: QuicksandBold;
+    font-size: 20px;
+}
+/* Icones de pagamento*/
+img.rdsPagamento
+{
+    vertical-align: middle;
+    width: auto; height: 100%;
+    margin-right: 15px;
+}
+
+/* Observação*/
+textarea.pagamento
+{
+    width: 97%; height: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid#000000;
+    font-size: 20px; font-family: Quicksand;
+    color: black;
+    /* Desabilita o ajuste de tamanho */
+    resize: none;
+}
+
+
+/* Input*/
+#inputCEP
+{
+    text-align: center;
+    font-size: 30px; font-family: Quicksand;
+    width: 220px; height: 53px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+.inputGrande
+{
+    text-align: center;
+    font-size: 27px; font-family: Quicksand;
+    width: 400px; height: 45px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+.inputPequeno
+{
+    text-align: center;
+    font-size: 27px; font-family: Quicksand;
+    width: 195px; height: 45px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+/* Texto*/
+text
+{
+    font-size: 25px; font-family: Quicksand;
+}
+
+
+/* Div onde estão todos os itens do cardápio*/
+#cardapio
+{
+    width: 60%; height: 400px;
+    padding: 15px; /* Margem interna */
+    margin-left: 100px; margin-top: 30px; /* Margens externas */
+    overflow-y: scroll; /* Scroll */
+    float: left; /* Alinha os itens à esquerda um do outro */
+}
+
+/* Div individual de cada pizza*/
+div.pizza
+{
+    margin-bottom: 35px;
+}
+
+/* Imagem de cada pizza*/
+img.pizza
+{
+    border-radius: 5px;
+    border: 1px solid #000000;
+    width: 170px; height: 150px;
+    float: left;
+    margin-right: 15px;
+}
+
+/* Sabor da pizza*/
+text.pizza
+{
+    font-family: QuicksandBold;
+    font-size: 25px;
+    float: left;
+}
+
+/* Descrição da pizza*/
+text.pizzaDesc
+{
+    margin-top: 10px;
+    width: 350px;
+    font-size: 20px;
+    font-family: Quicksand;
+    float: left;
+}
+
+/* Input Quantidade de pizzas*/
+input.pizzaQtd
+{
+    text-align: center;
+    font-size: 27px; font-family: QuicksandBold;
+    width: 83px; height: 52px;
+    margin-left: 35px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+/* Input Quantidade de pizzas*/
+input.pizzaQtdGrande
+{
+    text-align: center;
+    font-size: 27px; font-family: QuicksandBold;
+    width: 206px; height: 52px;
+    margin-left: 35px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+/* Botão mais e menos - quantidade de pizzas*/
+button.pizzaQtd
+{
+    width: 55px; height: 55px;
+    font-size: 25px; font-family: QuicksandBold;
+    color: white;
+    background-color: #FF1100;
+    border: 0; border-radius: 5px;
+    border: 1px solid #000000;
+    cursor:pointer; /* Cursor */        
+}
+
+/* Botão adicionar pizza ao pedido*/
+button.pizza
+{
+    width: 206px; height: 80px;
+    font-size: 25px; font-family: QuicksandBold;
+    color: white;
+    margin-left: 35px;
+    background-color: #FF1100;
+    border: 0; border-radius: 5px;
+    border: 1px solid #000000;
+    cursor:pointer; /* Cursor */
+}
+
+/* Botão Finalizar pedido */
+#btnFinalizar
+{
+    width: 100%; height: 70px;
+    font-size: 28px; font-family: QuicksandBold;
+    margin-top: 15px;
+    color: white;
+    background-color: #328E00;
+    border: 0; border-radius: 5px;
+    border: 1px solid #000000;
+    cursor:pointer; /* Cursor */
+}
+/* Tag span do botão */
+#btnFinalizar span 
+{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+#btnFinalizar span:after 
+{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+/* Ao passar o mouse */
+#btnFinalizar:hover span 
+{
+  padding-right: 25px;
+}
+#btnFinalizar:hover span:after 
+{
+    opacity: 1;
+    right: 0;
+}
+
+/*
+----------------
+----------------
+*/
+
+/* Botão confirmar pedido */
+#btnConfirmar
+{
+    width: 85%; height: 90px;
+    font-size: 28px; font-family: QuicksandBold;
+    margin-top: 105px;
+    color: white;
+    background-color: #328E00;
+    border: 0; border-radius: 5px;
+    border: 1px solid #000000;
+    cursor:pointer; /* Cursor */
+}
+/* Tag span do botão */
+#btnConfirmar span 
+{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+#btnConfirmar span:after 
+{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+/* Ao passar o mouse */
+#btnConfirmar:hover span 
+{
+  padding-right: 25px;
+}
+#btnConfirmar:hover span:after 
+{
+    opacity: 1;
+    right: 0;
+}
